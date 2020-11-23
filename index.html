@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+    <title>Renny Pereira's resume</title>
+</head>
+<body>
+    <div>
+        <h1 id="main-heading">Renny Pereira's resume</h1>
+    </div>
+    <div id="container">
+        <div id="sky" class="get">
+            <div class="cloud"><h3>Letrux Music Video</h3>
+            <p>One of 11 artists commissioned to animate the music video for the song <a href="https://www.youtube.com/watch?v=kJ_yAwl5iOQ" target="blank">"Abalos Sísmicos"</a> from Brazilian indie artist Letrux. The song is part of the Latin Grammy nominated album <a href="https://open.spotify.com/album/7EPPtrGoA1IReFyBBHYP8p" target="blank">Letrux aos Prantos</a>.</p>
+            </div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+        </div>
+        <div id="character"></div>
+    </div>
+
+<script>
+    const character = document.getElementById('character'),
+        bg = document.getElementById('sky');
+        bgWidth = document.getElementById('sky').offsetWidth,
+        step = 200;
+    let direction = 'forwards',
+        divPosition = 0,
+        screenWidth = window.innerWidth;
+
+    console.log(screenWidth);
+
+    function moveCharacter(e) {
+        console.log(screenWidth);
+        //Right
+        if(e.keyCode == 39) {
+            character.classList.add('walkForwards');
+            direction = 'forwards';
+            if(((bgWidth - step) - screenWidth) <= -divPosition) {
+                return;
+            } else {
+                divPosition = divPosition - step;
+                bg.style.left = `${divPosition}px`;             
+            }
+        }
+        //Left
+        if(e.keyCode == 37) {
+            character.classList.add('walkBackwards');
+            direction = 'backwards';
+            console.log(divPosition);
+            if(divPosition == 0) {
+                return;
+            } else {
+                divPosition = divPosition + step;
+                bg.style.left = `${divPosition}px`;
+            }
+        }
+        //Up
+        if(e.keyCode == 38) {
+            character.classList.add('jumpForwards');
+            direction = 'backwards';
+        }
+    }
+
+    function removeTransition(e) {
+        console.log(e.animationName);
+        character.classList.remove(e.animationName);
+        // character.classList.add(direction);
+    }
+    
+    character.addEventListener('animationend', removeTransition);
+    document.addEventListener('keydown', moveCharacter);
+    window.addEventListener('resize', function(){
+        screenWidth = window.innerWidth;
+    });
+</script>
+</body>
+</html>
