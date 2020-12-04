@@ -1,25 +1,61 @@
 :root {
   --spacing: 200px;
+  --bgWidth: 4000px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
 body {
   margin: 0;
   padding: 0;
+  font-family:'Montserrat','Gill Sans', 'Gill Sans MT', Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+p {
+  color:#76c0ea;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+a {color:#76c0ea;
+}
+
+a:hover {color:#004d95;
+transition: color 1s ease-in-out;
+}
+
+h1 {
+  font-size:60px;
+  margin: 0%;
+  text-align:center;
+}
+
+h4{color: #ffffff;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+strong{color:#76c0ea;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 
 #container {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100vw;
 }
 
 #sky {
   background: #92e5f8;
   height: 50vh;
-  width: 4000px;
+  width: var(--bgWidth);
   position: relative;
   left: 0;
 }
@@ -123,14 +159,6 @@ body {
   100% { transform: translate(0,0); }
 }
 
-
-a {color:#76c0ea;
-}
-
-a:hover {color:#004d95;
-transition: color 1s ease-in-out;
-}
-
 #main-heading{color:#004d95;
     background: #92e5f8;
     animation: color-change 5s infinite;
@@ -144,37 +172,41 @@ transition: color 1s ease-in-out;
   100% { color: red; }  
 }
 
-body{
-    font-family:'Montserrat','Gill Sans', 'Gill Sans MT', Helvetica, Arial, sans-serif;
-    font-style: normal;
-  }
-h4{color: #ffffff;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
+.ground {
+  height: 50vh;
+  width: var(--bgWidth);
+  position: absolute;
+  top: 50vh;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
 }
-p{color:#76c0ea;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-   }
-strong{color:#76c0ea;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+
+.ground-top {
+  background-color: #91CEAA;
+  height: 50%;
+  width: 4000px;
+  top: 50vh;
+  display: block;
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
-body{
-  padding:0;
-  margin:0;
-  font-family: 'Montserrat', sans-serif;
+
+.ground-road-container {
+  width: 4000px;
 }
-h1{
-  font-size:60px;
-  margin-block: 0%;
-  text-align:center;
+
+.ground-road {
+  background-image: url('Assets/BG-assets/road-square_1.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 70px;
+  width: 4000px;
+  margin: 0;
 }
-p{color:#76c0ea;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
- }
+
+.ground-bottom {
+  background-color: #57A577;
+  height: 50%;
+  width: 4000px;
+  display: block;
+  z-index: 1;
+}
