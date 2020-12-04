@@ -1,3 +1,11 @@
+:root {
+  --spacing: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -17,29 +25,57 @@ body {
 }
 
 .cloud {
-  background: white;
-  border-radius: 20%;
+  position: absolute;
+  /* background: white; */
+  /* border-radius: 20%; */
   height: 120px;
   width: 500px;
-  padding: 20px;
-  position: absolute;
 }
 
-.cloud:nth-of-type(1) {
-  border-radius: 20%;
-  left: 400px;
+.cloud-text {
+  background-image: url(Assets/BG-assets/cloud-main.png);
+  background-size: contain;
+  height: 124px;
+  width: 344px;
+  padding: 20px 10px;
+  left: 200px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.cloud-bg {
+  background-image: url('Assets/BG-assets/cloud-main.png');
+  background-size: contain;
+  height: 124px;
+  width: 344px;
+}
+
+.cloud-group {
+  background-image: url('Assets/BG-assets/four-clouds.png');
+  background-size: contain;
+  height: 266px;
+  width: 830px;
+}
+
+.cloud-group:nth-of-type(1) {
+  left: 800px;
+  top: 0px;
+  transform: scale(.5);
+}
+
+.cloud-bg:nth-of-type(1) {
+  left: 600px;
   top: 20px;
-  padding: 20px;
-}
-.cloud:nth-of-type(2) {
-  border-radius: 20%;
-  left: 1200px;
-  top: 60px;
-  padding: 20px;
 }
 
-.cloud:nth-of-type(3) {
-  left: 1600px;
+.cloud-bg:nth-of-type(2) {
+  left: 1400px;
+  top: 20px;
+  transform: scale(.5) scaleX(-1);
+}
+
+.cloud-bg:nth-of-type(3) {
+  left: 1800px;
   top: 20px;
 }
 
