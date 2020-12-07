@@ -33,7 +33,7 @@ transition: color 1s ease-in-out;
 h1 {
   font-size:60px;
   margin: 0%;
-  text-align:center;
+  text-align:left;
 }
 
 h4{color: #ffffff;
@@ -62,50 +62,54 @@ strong{color:#76c0ea;
 
 .cloud {
   position: absolute;
-  /* background: white; */
-  /* border-radius: 20%; */
   height: 120px;
   width: 500px;
 }
 
-.cloud-text {
-  background-image: url(Assets/BG-assets/cloud-main.png);
+.cloud-text1 {
+  background-image: url('Assets/BG-assets/cloud-text.png');
   background-size: contain;
-  height: 124px;
-  width: 344px;
-  padding: 20px 10px;
-  left: 200px;
+  height: 180px;
+  width: 350px;
+  padding: 15px 10px 10px 40px;
+  left: 100px;
   box-sizing: border-box;
   z-index: 1;
 }
 
+.cloud-text2 {
+  background-image: url('Assets/BG-assets/cloud-text.png');
+  background-size: contain;
+  height: 180px;
+  width: 350px;
+  padding: 8px 10px 10px 50px;
+  left: 700px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.cloud-text3 {
+  background-image: url('Assets/BG-assets/cloud-text.png');
+  background-size: contain;
+  height: 180px;
+  width: 350px;
+  padding: 5px 10px 10px 40px;
+  left: 1300px;
+  box-sizing: border-box;
+  z-index: 3;
+}
 .cloud-bg {
-  background-image: url('Assets/BG-assets/cloud-main.png');
   background-size: contain;
   height: 124px;
   width: 344px;
 }
 
-.cloud-group {
-  background-image: url('Assets/BG-assets/four-clouds.png');
-  background-size: contain;
-  height: 266px;
-  width: 830px;
-}
-
-.cloud-group:nth-of-type(1) {
-  left: 800px;
-  top: 0px;
-  transform: scale(.5);
-}
-
 .cloud-bg:nth-of-type(1) {
   left: 600px;
-  top: 20px;
+  top: 30px;
 }
 
 .cloud-bg:nth-of-type(2) {
-  left: 1400px;
+  left: 620px;
   top: 20px;
   transform: scale(.5) scaleX(-1);
 }
@@ -120,7 +124,7 @@ strong{color:#76c0ea;
   height: 200px;
   width: 200px;
   position: absolute;
-  top: calc(70vh - 175px);
+  top: calc(70vh - 140px);
 }
 
 #character.walkForwards { 
@@ -162,9 +166,12 @@ strong{color:#76c0ea;
 #main-heading{color:#004d95;
     background: #92e5f8;
     animation: color-change 5s infinite;
+    text-align:  left;
+    padding: 8px 40px;
     font-size: 4vw;
     font-style: normal;
     font-family: 'Poppins', sans-serif;
+    width: 4000px;
 }
 @keyframes color-change {
   0% { color: #76c0ea; }
