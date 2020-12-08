@@ -48,7 +48,7 @@ strong{color:#76c0ea;
 }
 
 #container {
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100vw;
 }
 
@@ -182,7 +182,7 @@ strong{color:#76c0ea;
 .ground {
   height: 50vh;
   width: var(--bgWidth);
-  position: absolute;
+  float: left;
   top: 50vh;
   z-index: -1;
   display: flex;
