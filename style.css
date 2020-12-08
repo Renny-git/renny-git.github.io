@@ -18,32 +18,31 @@ body {
 
 p {
   color:#76c0ea;
-  font-size: 12px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
+  font-style: normal;
 }
 
 a {color:#76c0ea;
+  animation: color-change 5s infinite;
 }
 
-a:hover {color:#004d95;
+a:hover {color:red;
 transition: color 1s ease-in-out;
 }
 
 h1 {
-  font-size:60px;
+  font-size:40px;
   margin: 0%;
   text-align:left;
 }
 
-h4{color: #ffffff;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
+h3{color:#004d95;
+  font-size: 16px;
 }
 
 strong{color:#76c0ea;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -82,7 +81,7 @@ strong{color:#76c0ea;
   background-size: contain;
   height: 180px;
   width: 350px;
-  padding: 8px 10px 10px 50px;
+  padding: 10px 2px 5px 50px;
   left: 700px;
   box-sizing: border-box;
   z-index: 3;
@@ -92,8 +91,18 @@ strong{color:#76c0ea;
   background-size: contain;
   height: 180px;
   width: 350px;
-  padding: 5px 10px 10px 40px;
+  padding: 10px 2px 5px 30px;
   left: 1300px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.cloud-text4 {
+  background-image: url('Assets/BG-assets/cloud-text.png');
+  background-size: contain;
+  height: 180px;
+  width: 350px;
+  padding: 12px 2px 5px 30px;
+  left: 1900px;
   box-sizing: border-box;
   z-index: 3;
 }
@@ -124,7 +133,7 @@ strong{color:#76c0ea;
   height: 200px;
   width: 200px;
   position: absolute;
-  top: calc(70vh - 140px);
+  top: calc(73vh - 140px);
 }
 
 #character.walkForwards { 
@@ -163,12 +172,11 @@ strong{color:#76c0ea;
   100% { transform: translate(0,0); }
 }
 
-#main-heading{color:#004d95;
+#main-heading{color:#1b75c9;
     background: #92e5f8;
-    animation: color-change 5s infinite;
     text-align:  left;
     padding: 8px 40px;
-    font-size: 4vw;
+    font-size: 3vw;
     font-style: normal;
     font-family: 'Poppins', sans-serif;
     width: 4000px;
@@ -191,7 +199,7 @@ strong{color:#76c0ea;
 
 .ground-top {
   background-color: #91CEAA;
-  height: 50%;
+  height: 30%;
   width: 4000px;
   top: 50vh;
   display: block;
