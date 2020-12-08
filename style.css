@@ -129,11 +129,11 @@ strong{color:#76c0ea;
 }
 
 #character {
-  background-image: url('renny-slides2.png');
-  height: 200px;
-  width: 200px;
+  background-image: url('renny-slides3.png');
+  height: 190px;
+  width: 170px;
   position: absolute;
-  top: calc(73vh - 140px);
+  top: calc(70vh - 140px);
 }
 
 #character.walkForwards { 
@@ -147,7 +147,7 @@ strong{color:#76c0ea;
 }
 
 #character.walkBackwards { 
-  background-position-y: 200px;
+  background-position-y: 190px;
   animation: walkBackwards .5s steps(2) forwards;
 }
 
