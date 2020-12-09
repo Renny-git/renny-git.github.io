@@ -46,6 +46,10 @@ strong{color:#76c0ea;
   font-family: 'Poppins', sans-serif;
 }
 
+.instructions {
+  transition: opacity .5s ease-out;
+}
+
 #container {
   overflow: hidden;
   width: 100vw;
