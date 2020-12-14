@@ -36,6 +36,10 @@ h1 {
   margin: 0%;
   text-align:left;
 }
+h2{color: white;
+  font-size: 22px;
+  font-style: bold;
+}
 
 h3{color:#004d95;
   font-size: 16px;
@@ -47,7 +51,7 @@ strong{color:#76c0ea;
 }
 
 .instructions {
-  transition: opacity .5s ease-out;
+  transition: opacity 6s ease-out;
 }
 
 #container {
